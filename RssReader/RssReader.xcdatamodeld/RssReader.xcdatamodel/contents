@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16D32" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="RssChannel" representedClassName="RssChannel" syncable="YES" codeGenerationType="class">
+        <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="rssFeed" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="RssNews" inverseName="rssChannel" inverseEntity="RssNews" syncable="YES"/>
+    </entity>
+    <entity name="RssNews" representedClassName="RssNews" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="rssChannel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RssChannel" inverseName="rssFeed" inverseEntity="RssChannel" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="RssChannel" positionX="-2907" positionY="-936" width="128" height="103"/>
+        <element name="RssNews" positionX="-2729" positionY="-945" width="128" height="118"/>
+    </elements>
+</model>
