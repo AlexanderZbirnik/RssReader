@@ -4,9 +4,9 @@ Small RSS Reader working in offline mode.
 
 ## Opportunities:
 
-- [x] Add and delete rssFeeds
+- [x] Add, delete and recovery rss channels
 - [x] Save feeds - offline mode
-- [x] Open new in SafariViewController
+- [x] Open news in SafariViewController
 
 ## Language:
 
